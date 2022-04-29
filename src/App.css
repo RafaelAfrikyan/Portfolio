@@ -1,14 +1,40 @@
 .App {
   text-align: center;
 }
-
+body {
+  background-color: rgb(230, 230, 230);
+}
+.home {
+  width: 100vh;
+  height: 70vh;
+  margin-left: 350px;
+}
+.home > img {
+  opacity: 0.7;
+  z-index: -1;
+  height: 60vh;
+}
+.home > img:hover {
+  opacity: 1;
+}
+.homeText {
+  font-family: "Trocchi", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.homeText > p {
+  font-size: larger;
+}
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  background-color: #78909c;
+  background-color: rgb(230, 230, 230);
+  border-bottom: 0.05px solid rgb(192, 192, 192);
   color: black;
   font-family: "Trocchi", serif;
   font-size: larger;
@@ -16,6 +42,7 @@
 .wrapper {
   margin-left: 70px;
 }
+
 .headerDiv {
   color: white;
   text-decoration: none;
@@ -23,7 +50,7 @@
   font-family: "Trocchi", serif;
 }
 .active {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: underline;
 }
 .wrapper2 {
@@ -50,7 +77,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: white;
+  background-color: rgb(230, 230, 230);
   width: 75vh;
   gap: 25x;
   margin-bottom: 0px;
@@ -64,7 +91,7 @@
   flex-direction: column;
   height: 60vh;
   width: 75vh;
-  background-color: white;
+  background-color: rgb(230, 230, 230);
   gap: 25px;
   font-family: "Trocchi", serif;
 }
@@ -78,17 +105,20 @@
 .firstLine > input {
   height: 30px;
   width: 235px;
+  border: none;
 }
 .subject {
   width: 500px;
   height: 30px;
+  border: none;
 }
 .message {
   width: 500px;
   height: 150px;
+  border: none;
 }
 .rightSide > button {
-  background-color: rgb(230, 230, 230);
+  background-color: white;
   border-radius: 20px;
   width: 150px;
   height: 40px;
@@ -127,6 +157,7 @@
 .wrapPhoto > img {
   height: 260px;
   width: 260px;
+  border-radius: 130px;
 }
 .wrapText {
   display: flex;
@@ -148,8 +179,9 @@
   flex-direction: column;
   height: 80vh;
   width: 75vh;
-  background-color: white;
+  background-color: rgb(230, 230, 230);
   font-family: "Trocchi", serif;
+ 
 }
 .AboutLeftside {
   display: flex;
@@ -158,7 +190,8 @@
   flex-direction: column;
   height: 80vh;
   width: 75vh;
-  background-color: white;
+  
+  background-color: rgb(230, 230, 230);
   font-family: "Trocchi", serif;
 }
 
@@ -166,6 +199,7 @@
   margin-top: -100px;
   flex-wrap: wrap;
   margin-right: 25px;
+  
 }
 .aboutSkills {
   margin-left: -160px;

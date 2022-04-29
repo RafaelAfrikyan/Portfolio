@@ -12,7 +12,7 @@ export default function Header() {
         </div>
         <div className="wrapper2">
           <NavLink className={"headerDiv"} to="/about">
-            About
+            About me
           </NavLink>
           <NavLink className={"headerDiv"} to="/portfolio">
             Portfolio
