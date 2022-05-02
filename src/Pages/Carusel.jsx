@@ -6,7 +6,6 @@ import trello from "../assets/trello.png";
 import shop from "../assets/shop.png";
 import todo from "../assets/TODO.png";
 import sea from "../assets/sea.png";
-import prev from "../assets/prev.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
