@@ -1,44 +1,92 @@
 .App {
   text-align: center;
 }
-body {
-  background-color: rgb(230, 230, 230);
-}
+
 .home {
-  width: 100vh;
-  height: 70vh;
-  margin-left: 350px;
+  width: 100%;
+  height: 87vh;
 }
-.home > img {
+.homeText > img {
   opacity: 0.7;
-  z-index: -1;
+  z-index: 1;
   height: 60vh;
+  margin-top: 60px;
 }
-.home > img:hover {
+.homeText > img:hover {
   opacity: 1;
 }
 .homeText {
+  color: black;
   font-family: "Trocchi", serif;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 100px;
 }
 .homeText > p {
   font-size: larger;
 }
+.homeWrap {
+  width: 100%;
+}
 .header {
   display: flex;
+  position: fixed;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
-  background-color: rgb(230, 230, 230);
+  padding: 3vh;
   border-bottom: 0.05px solid rgb(192, 192, 192);
-  color: black;
+  color: white;
   font-family: "Trocchi", serif;
   font-size: larger;
+  background-color: #1d1d1d;
+  width: 100%;
+  top: 0;
+  z-index: 5;
 }
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  background-color: white;
+}
+.next {
+  border-radius: 15px;
+  width: 50px;
+  height: 50px;
+  position: inherit;
+  top: -200px;
+  right: -550px;
+}
+.next:hover {
+  transform: scale(1.1);
+}
+.prev:hover {
+  transform: scale(1.1);
+}
+.prev {
+  border-radius: 15px;
+  width: 50px;
+  height: 50px;
+  position: inherit;
+  top: 200px;
+  right: 550px;
+}
+.innerDiv {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.innerDiv > div {
+  margin-left: 40px;
+}
+
 .wrapper {
   margin-left: 70px;
 }
@@ -46,11 +94,14 @@ body {
 .headerDiv {
   color: white;
   text-decoration: none;
-  color: black;
+  opacity: 0.9;
   font-family: "Trocchi", serif;
 }
+.headerDiv:hover {
+  opacity: 1;
+}
 .active {
-  color: rgb(0, 0, 0);
+  color: white;
   text-decoration: underline;
 }
 .wrapper2 {
@@ -62,14 +113,20 @@ body {
   gap: 55px;
   margin-right: 70px;
 }
+.wrapper2 > *:hover {
+  transform: scale(1.1);
+}
+.wrapper:hover {
+  transform: scale(1.1);
+}
 
-.contact {
+.contact1 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   background-color: rgb(230, 230, 230);
-  height: 90vh;
+  height: 100vh;
 }
 .leftSide {
   height: 60vh;
@@ -77,13 +134,22 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(230, 230, 230);
+  /* background-color: white; */
+  /* border: 2px solid rgb(255, 0, 0); */
   width: 75vh;
   gap: 25x;
   margin-bottom: 0px;
   font-family: "Trocchi", serif;
-}
 
+  z-index: 55;
+  border-radius: 25px;
+}
+.leftSide > p {
+  font-size: larger;
+}
+.mc {
+  font-size: xx-large;
+}
 .rightSide {
   display: flex;
   justify-content: center;
@@ -91,9 +157,11 @@ body {
   flex-direction: column;
   height: 60vh;
   width: 75vh;
-  background-color: rgb(230, 230, 230);
+  /* background-color: white; */
   gap: 25px;
   font-family: "Trocchi", serif;
+  opacity: 0.9;
+  z-index: 55;
 }
 .firstLine {
   display: flex;
@@ -105,20 +173,18 @@ body {
 .firstLine > input {
   height: 30px;
   width: 235px;
-  border: none;
 }
 .subject {
   width: 500px;
   height: 30px;
-  border: none;
 }
 .message {
   width: 500px;
   height: 150px;
-  border: none;
 }
 .rightSide > button {
-  background-color: white;
+  background-color: black;
+  color: white;
   border-radius: 20px;
   width: 150px;
   height: 40px;
@@ -131,10 +197,19 @@ body {
   -webkit-box-shadow: 1px -3px 14px -5px rgba(34, 60, 80, 0.6) inset;
   -moz-box-shadow: 1px -3px 14px -5px rgba(34, 60, 80, 0.6) inset;
   box-shadow: 1px -3px 14px -5px rgba(34, 60, 80, 0.6) inset;
+  transform: scale(1.01);
 }
 .icons > img {
   height: 40px;
   width: 40px;
+
+  border-radius: 50%;
+}
+.icons > img:hover {
+  height: 40px;
+  width: 40px;
+  transform: scale(1.1);
+  border-radius: 50%;
 }
 .icons {
   display: flex;
@@ -170,7 +245,7 @@ body {
   align-items: center;
   flex-direction: row;
   background-color: rgb(230, 230, 230);
-  height: 90vh;
+  height: 100vh;
 }
 .AboutrightSide {
   display: flex;
@@ -181,7 +256,6 @@ body {
   width: 75vh;
   background-color: rgb(230, 230, 230);
   font-family: "Trocchi", serif;
- 
 }
 .AboutLeftside {
   display: flex;
@@ -190,7 +264,7 @@ body {
   flex-direction: column;
   height: 80vh;
   width: 75vh;
-  
+
   background-color: rgb(230, 230, 230);
   font-family: "Trocchi", serif;
 }
@@ -199,16 +273,20 @@ body {
   margin-top: -100px;
   flex-wrap: wrap;
   margin-right: 25px;
-  
 }
 .aboutSkills {
   margin-left: -160px;
   margin-bottom: 100px;
 }
-.bla {
-  height: 200px;
+.bla2 {
+  height: 150px;
   width: 300px;
 }
+.bla {
+  height: 350px;
+  width: 300px;
+}
+
 .skillimg {
   width: 70px;
   height: 70px;
@@ -217,7 +295,24 @@ body {
 .portfolio {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  margin: 30px;
   gap: 25px;
+  height: 100%;
+  background-color: rgb(230, 230, 230);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.carousel.carousel-slider .control-arrow {
+  top: 0;
+  color: rgb(0, 0, 0);
+  font-size: 26px;
+  bottom: 0;
+  margin-top: 0;
+  padding: 5px;
+}
+* {
+  margin: 0px;
+  padding: 0px;
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="contact">
+    <div className="contact1">
       <div className="rightSide">
         <h1>Send me message</h1>
         <div className="firstLine">
@@ -23,12 +23,10 @@ export default function Contact() {
         <p>E-mail: rafaelafrikyan95@gmail.com</p>
         <p>Social network:</p>
         <div className="icons">
-     
-            <img
-              src="https://www.svgrepo.com/show/303615/github-icon-1-logo.svg"
-              alt=""
-            />
-         
+          <img
+            src="https://www.svgrepo.com/show/303615/github-icon-1-logo.svg"
+            alt=""
+          />
 
           <img
             src=" https://cdn.icon-icons.com/icons2/2428/PNG/512/linkedin_black_logo_icon_147114.png"
