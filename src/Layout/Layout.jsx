@@ -7,10 +7,12 @@ export default function Layout({
   aboutHeader,
   booksHeader,
   contactHeader,
+  homeHeader
 }) {
   return (
     <div>
       <Header
+      homeHeader={homeHeader}
         portfolioHeader={portfolioHeader}
         aboutHeader={aboutHeader}
         booksHeader={booksHeader}

@@ -10,6 +10,8 @@ export default function Home() {
   const aboutRef = useRef(null);
   const caruselRef = useRef(null);
   const contactRef = useRef(null);
+  const homeRef = useRef(null);
+  const homeHeader = useRef(null);
   const portfolioHeader = useRef(null);
   const aboutHeader = useRef(null);
   const booksHeader = useRef(null);
@@ -17,11 +19,17 @@ export default function Home() {
   const [portfolioVisible, setPortfolioVisible] = useState(false);
   const [aboutVisible, setAboutVisible] = useState(false);
   const [contactVisible, setContactVisible] = useState(false);
+  const [homeVisible, sethomeVisible] = useState(false);
+
+  const homeCb = (entries) => {
+    const [entry] = entries;
+    sethomeVisible(entry.isIntersecting);
+    console.log(entry);
+  };
 
   const aboutCb = (entries) => {
     const [entry] = entries;
     setAboutVisible(entry.isIntersecting);
-    console.log(entry);
   };
   const contactCb = (entries) => {
     const [entry] = entries;
@@ -31,6 +39,11 @@ export default function Home() {
   const cb = (entries) => {
     const [entry] = entries;
     setPortfolioVisible(entry.isIntersecting);
+  };
+  const optionsHome = {
+    root: null,
+    rootMargin: "300px",
+    threshold: 1.0,
   };
   const options = {
     root: null,
@@ -47,6 +60,18 @@ export default function Home() {
     rootMargin: "100px",
     threshold: 1.0,
   };
+
+  useEffect(() => {
+    const sectionObserverHome = new IntersectionObserver(homeCb, optionsHome);
+    if (homeRef.current) sectionObserverHome.observe(homeRef.current);
+    homeVisible
+      ? (homeHeader.current.className = "active")
+      : (homeHeader.current.className = "headerDiv");
+
+    return () => {
+      if (homeRef.current) sectionObserverHome.unobserve(homeRef.current);
+    };
+  }, [homeRef, optionsHome, homeVisible]);
 
   useEffect(() => {
     const sectionObserverAbout = new IntersectionObserver(
@@ -94,12 +119,13 @@ export default function Home() {
   return (
     <div className="homeWrap">
       <Layout
+        homeHeader={homeHeader}
         portfolioHeader={portfolioHeader}
         aboutHeader={aboutHeader}
         booksHeader={booksHeader}
         contactHeader={contactHeader}
       />
-      <div className="home">
+      <div ref={homeRef} className="home">
         <div className="homeText">
           <h1>Dear friend</h1>
           <p>Welcome to my web-site</p>

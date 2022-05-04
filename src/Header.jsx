@@ -1,12 +1,12 @@
 import React from "react";
 import { NavLink, Routes, Route, Link } from "react-router-dom";
 
-export default function Header({portfolioHeader, aboutHeader, booksHeader, contactHeader}) {
+export default function Header({portfolioHeader, homeHeader, aboutHeader, booksHeader, contactHeader}) {
   return (
     <div>
       <header className="header">
         <div className="wrapper">
-          <NavLink className={"headerDiv"} to="/">
+          <NavLink ref ={homeHeader} className={({ isActive }) => (isActive ? "active" : "headerDiv")} to="/">
             Home
           </NavLink>
         </div>
