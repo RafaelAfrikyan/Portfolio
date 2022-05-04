@@ -33,7 +33,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-export default function Carusel() {
+export default function Carusel({caruselRef}) {
   var settings = {
     dots: true,
     infinite: true,
@@ -50,7 +50,7 @@ export default function Carusel() {
   };
 
   return (
-    <div className="container">
+    <div ref={caruselRef} className="container">
       <Slider className="innerDiv" {...settings}>
         <div>
           <ImgMediaCard title="Timer" photo={timer} />

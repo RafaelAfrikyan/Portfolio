@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Routes, Route, Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header({portfolioHeader, aboutHeader, booksHeader, contactHeader}) {
   return (
     <div>
       <header className="header">
@@ -11,16 +11,21 @@ export default function Header() {
           </NavLink>
         </div>
         <div className="wrapper2">
-          <NavLink className={"headerDiv"} to="/about">
+          <NavLink ref={aboutHeader}
+            className={({ isActive }) => (isActive ? "active" : "headerDiv")}
+            to="/about"
+          > 
             About me
           </NavLink>
-          <NavLink className={"headerDiv"} to="/portfolio">
+          <NavLink ref={portfolioHeader} 
+            className={({ isActive }) => (isActive ? "active" : "headerDiv")}
+             to="/portfolio">
             Portfolio
           </NavLink>
-          <NavLink className={"headerDiv"} to="/books">
+          <NavLink ref={booksHeader} className={({ isActive }) => (isActive ? "active" : "headerDiv")} to="/books">
             Books
           </NavLink>
-          <NavLink className={"headerDiv"} to="/contact">
+          <NavLink ref={contactHeader} className={({ isActive }) => (isActive ? "active" : "headerDiv")} to="/contact">
             Contact
           </NavLink>
         </div>

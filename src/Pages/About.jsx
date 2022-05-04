@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
+import reactIcon from "../assets/react-brands.svg";
+import cssIcon from "../assets/css3-alt-brands.svg";
+import htmlIcon from "../assets/html5-brands.svg";
+import jsIcon from "../assets/js-brands.svg";
 
-export default function About() {
+export default function About({ aboutRef }) {
   return (
     <div className="Aboutcontact">
-      <div className="AboutrightSide">
+      <div ref={aboutRef} className="AboutrightSide">
         <div className="wrapPhoto">
           <img
             src="https://pbs.twimg.com/profile_images/950624816561827841/RI36b75x_400x400.jpg"
@@ -16,27 +20,11 @@ export default function About() {
         </div>
         <div className="aboutSkills">
           <h1>Skills</h1>
-          <img
-            className="skillimg"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png"
-            alt=""
-          />
+          <img className="skillimg" src={htmlIcon} alt="" />
 
-          <img
-            className="skillimg"
-            src="https://icon-library.com/images/css-icon-png/css-icon-png-0.jpg"
-            alt=""
-          />
-          <img
-            className="skillimg"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png"
-            alt=""
-          />
-          <img
-            className="skillimg"
-            src="https://cdn.iconscout.com/icon/free/png-256/react-1-282599.png"
-            alt=""
-          />
+          <img className="skillimg" src={cssIcon} alt="" />
+          <img className="skillimg" src={jsIcon} alt="" />
+          <img className="skillimg" src={reactIcon} alt="" />
         </div>
       </div>
 
